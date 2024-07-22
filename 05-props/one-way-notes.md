@@ -4,16 +4,15 @@ En React se utiliza el llamado flujo de datos unidireccional (one-way data flow)
 
 ![one-way](./one-way%20data%20flow.png)
 
+<img src="./flujo-unidireccional.md" alt="flujo" width="200">
+
 ## **Razones por las que React utiliza un flujo de datos unidireccional**:
 
-1. Predecibilidad y comprensión:
-
+- _Predecibilidad y comprensión_:
 - Las aplicaciones son mucho más predecibles y fáciles de entender para los desarrolladores porque es más fácil determinar de dónde proceden los datos si solo fluyen en una dirección.
 
-2. Facilidad de depuración:
-
+- _Facilidad de depuración_:
 - Este enfoque simplifica la depuración (debugging) de las aplicaciones, ya que la fuente de los datos es clara y no hay necesidad de rastrear cambios en múltiples direcciones.
 
-3. Eficiencia:
-
+- _Eficiencia_:
 - La vinculación bidireccional de datos suele ser menos eficiente y, por tanto, menos eficaz. El flujo de datos unidireccional permite a React optimizar mejor la actualización y renderización de los componentes.

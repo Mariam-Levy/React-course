@@ -22,6 +22,8 @@ Props es una abreviatura de "properties" y es la forma en que pasamos datos entr
 - Mutación de datos: Si se necesita mutar datos, se debe usar state porque son datos que cambian con el tiempo.
 - Inmutabilidad en el desarrollo de React: En general, un componente nunca debe mutar cualquier dato que escribamos fuera de su ámbito de función.
 
-NOTA: ¿Por qué los props son inmutables en React?
+---
+
+_NOTA_: ¿Por qué los props son inmutables en React?
 La inmutabilidad de los props asegura un flujo de datos unidireccional, lo que facilita la comprensión y depuración del código.
 Los componentes deben ser "puros" en términos de sus props y state. Esto permite a React optimizar tu aplicación y evita bugs que pueden aparecer cuando manipulas datos externos.
