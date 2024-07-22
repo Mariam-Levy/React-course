@@ -2,7 +2,7 @@
 
 Props es una abreviatura de "properties" y es la forma en que pasamos datos entre componentes en React, particularmente de componentes padres a componentes hijos. Se utilizan para comunicar información a través del árbol de componentes.
 
-![props](./props.png)
+<img src="./props.png" alt="props" width="300">
 
 - _Props como configuración_: Podemos imaginar los props como configuraciones que permiten que un componente padre controle cómo debe ser y cómo debe funcionar su componente hijo.
 
