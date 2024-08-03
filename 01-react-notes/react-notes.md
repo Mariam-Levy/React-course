@@ -41,7 +41,7 @@
 ### **Renderizado Condicional en React:** 
 El renderizado condicional en React permite mostrar u ocultar partes de la interfaz de usuario basadas en condiciones específicas. Puedes usar varias técnicas para lograrlo:
 
-- Renderizado condicional con el operador lógico &&:
+- Renderizado condicional con el operador lógico `&&`:
   - Si la primera parte de la expresión es `true` o un valor _"truthy"_ (un valor que se evalúa como verdadero en un contexto booleano), entonces la segunda parte de la expresión se renderizará.
 
 - Renderizado condicional con el operador ternario ( `? :` ):
@@ -58,7 +58,7 @@ El renderizado condicional en React permite mostrar u ocultar partes de la inter
 <br>
 
 ### React Fragment
-Permite agrupar varios elementos sin añadir nodos adicionales al árbol del DOM. Esto es útil cuando necesitas devolver múltiples elementos desde un componente, pero no quieres introducir un _<div>_ u otro contenedor innecesario que podría afectar el estilo o la estructura de tu HTML.
+Permite agrupar varios elementos sin añadir nodos adicionales al árbol del DOM. Esto es útil cuando necesitas devolver múltiples elementos desde un componente, pero no quieres introducir un `<div>` u otro contenedor innecesario que podría afectar el estilo o la estructura de tu HTML.
 
 - **Características principales:**
     - 1.- _Agrupación sin rastro en el DOM_: React Fragment no añade ningún elemento extra al DOM. Es una forma de agrupar hijos en un componente sin alterar la estructura de la salida HTML.
@@ -66,5 +66,58 @@ Permite agrupar varios elementos sin añadir nodos adicionales al árbol del DOM
 - **Sintaxis:**
    - 1.- Puedes usar la etiqueta `<Fragment></Fragment>`.
    - 2.- Para mayor simplicidad, React también soporta la sintaxis corta `<> </>`
+
+
+---
+
+<br>
+
+## Componentes en React
+
+### 1.- Bloques de construcción de la interfaz de usuario:
+- Los componentes son los bloques fundamentales de cualquier interfaz de usuario en React. Cada componente es una pieza autónoma que encapsula sus propios datos, lógica y apariencia.
+
+### 2.- JSX y la apariencia de los componentes:
+- Los componentes en React se definen utilizando una sintaxis declarativa llamada **JSX** (JavaScript XML), que combina la lógica de JavaScript con una estructura similar a HTML.
+- Cada componente devuelve un bloque de JSX que describe lo que el usuario verá en la pantalla.
+
+### 3.- Contenido en JSX:
+- Un trozo de JSX puede contener marcado (markup) similar a HTML, estilos en línea (CSS) y lógica JavaScript. Esto permite crear interfaces de usuario complejas de forma sencilla y declarativa.
+
+### 4.- Pasar datos entre componentes con `props`:
+- Para compartir datos entre componentes, un componente padre puede pasar datos a un componente hijo directo utilizando **props** (abreviatura de "properties").
+- Cada valor que se quiere pasar a un componente hijo se define como un prop.
+- **Importante**: Los props solo pueden pasar datos de un componente padre a sus hijos, pero no al revés. Los datos fluyen unidireccionalmente de padres a hijos.
+
+### 5.- Renderización de listas y renderizado condicional:
+- Es común en aplicaciones React renderizar múltiples componentes del mismo tipo iterando sobre un array. Esto se conoce como **crear una lista** de componentes.
+- También puedes renderizar condicionalmente componentes utilizando herramientas de JavaScript como el operador ternario (`? :`), el operador lógico `&&`, o múltiples declaraciones `return` dentro de un componente.
+
+
+---
+
+<br>
+
+### EJEMPLO
+
+![resumen-propio](https://github.com/user-attachments/assets/f2d4d57e-4d1c-42d6-8fe9-bf6d08ceb8ef)
+
+<br>
+
+---
+<br>
+
+## Eventos en React
+  - Sintaxis de eventos en JSX:
+    - **1.-** En lugar de usar los nombres de eventos en minúsculas como en HTML, en React se utilizan camelCase. Por ejemplo, `onClick` en lugar de onclick. ![onclick](https://github.com/user-attachments/assets/3e20a200-5a28-4297-ae83-0b810c15fa4a)
+
+    - **2.-** Los manejadores de eventos en React se pasan como funciones. Puedes definir estas funciones en línea o como métodos separados.![onMouseEnter](https://github.com/user-attachments/assets/46393014-c73e-4c95-90f6-141f8460b363)
+
+---
+<br>
+
+
+
+
 
 
