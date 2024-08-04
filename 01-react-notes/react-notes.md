@@ -117,6 +117,63 @@ Permite agrupar varios elementos sin añadir nodos adicionales al árbol del DOM
 <br>
 
 
+## Estados en React
+El estado `(state)` en React es una estructura que permite a los componentes mantener y gestionar datos a lo largo del tiempo. Es especialmente útil para datos que un componente necesita "recordar" a lo largo de su ciclo de vida.
+
+> **Podemos pensar que el estado es la "memoria" de un componente.**
+
+- **Ejemplos de estados comunes:**
+  - Recuento de notificaciones.
+  - Contenido de un campo de entrada de texto.
+  - Pestaña activa en un componente de pestañas.
+  - Contenido de un carrito de compras (ejemplo más complejo de estado).
+
+#### Conceptos clave sobre el estado:
+  - **1.- Pieza de estado:** 
+    - Una pieza de estado o una variable de estado es una variable real en el componente que definimos usando React. Esta variable puede cambiar con el tiempo y React se encarga de volver a renderizar el componente cuando el estado cambia.
+
+  - **2.- Re-renderización de un componente:**
+    - Cada vez que actualizamos una pieza de estado en un componente, React vuelve a renderizar ese componente para reflejar los cambios en la interfaz de usuario.
+
+  - **3.- Importancia del estado:** 
+    - Actualizar la vista del componente: El estado permite que los componentes React actualicen su vista cuando los datos cambian.
+    - Persistencia entre renders: El estado permite que los componentes mantengan valores locales entre múltiples renderizaciones y re-renderizaciones.
+
+
+#### Pasos para utilizar estados en React:
+- 1.- Definir una nueva variable de estado:
+    - Se define utilizando el hook useState. _Ejem:_ ![useState](https://github.com/user-attachments/assets/b37c841e-486e-42d1-b4f1-b1fe50fad94f)
+
+- 2.- Utilizar la variable de estado en el JSX::
+    - Puedes acceder al valor del estado directamente en el JSX. _Ejem:_ ![JSX](https://github.com/user-attachments/assets/af2f213b-7138-42e9-a184-d59663018513)
+
+- 3.- Actualizar la pieza de estado:
+    - Se actualiza típicamente en un manejador de eventos. _Ejem:_ ![actualizar](https://github.com/user-attachments/assets/e3857228-60a1-4739-ae96-df3b796ed9dc)
+
+<br>
+
+> ![resumen state](https://github.com/user-attachments/assets/5107cb4d-887b-4018-88c2-0e0d45e70a4a)
+
+_ _ _
+
+<br>
+
+### State vs. props
+| state | props |
+| --- | --- | 
+| **Datos internos, propiedad del componente:** El estado es información que pertenece únicamente al componente en el que se define. | **Datos externos, propiedad del componente padre:** Las propiedades son datos que se pasan desde un componente padre a un componente hijo. |
+| **"Memoria" del componente:** El estado actúa como la memoria del componente, permitiéndole recordar valores entre renderizaciones. | **Similares a los parámetros de función:** Los props son como los parámetros que pasas a una función, pero en este caso, los pasas a un componente. |
+| **Puede ser actualizado por el propio componente:** Los componentes pueden actualizar su propio estado usando funciones como setState en componentes de clase o useState en componentes funcionales. | **Solo de lectura (Read-only):** Los componentes hijos no pueden modificar las props que reciben; son inmutables dentro del componente hijo. |
+| **Actualizar el estado provoca que el componente se vuelva a renderizar:** Cada vez que cambias el estado, React vuelve a renderizar el componente para reflejar los cambios en la interfaz. | **Recibir nuevas props provoca que el componente se vuelva a renderizar:** Cuando un componente recibe nuevas props (por ejemplo, si el componente padre cambia su estado y pasa ese nuevo estado como prop), React vuelve a renderizar el componente hijo para reflejar los nuevos datos. |
+| **Usado para hacer los componentes interactivos:** El estado se utiliza para manejar la interactividad dentro del componente, como responder a clics de botones o entradas del usuario. | **Utilizadas por el padre para configurar el componente hijo:** Las props permiten que un componente padre personalice o configure el comportamiento y la apariencia de un componente hijo. |
+
+<br>
+
+#### Resumen:
+  - Estado: Se usa para datos que cambian dentro de un componente y necesitan ser recordados entre renderizaciones.
+  - Props: Se usa para pasar datos de un componente padre a un componente hijo. Estos datos no pueden ser modificados por el hijo.
+
+- - -
 
 
 
