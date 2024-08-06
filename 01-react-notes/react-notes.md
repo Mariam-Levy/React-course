@@ -175,6 +175,17 @@ _ _ _
 
 - - -
 
+<br>
 
+## Estado Local (Local State) vs. Estado Global (Global State)
 
+| Estado Local (Local State) | Estado Global (Global State): |
+| --- | --- | 
+| El estado local es el estado que es necesario solo para uno o pocos componentes. Es información que no necesita ser compartida ampliamente en la aplicación. | El estado global es el estado que puede ser necesario para muchos componentes en la aplicación. Es un estado compartido que cualquier componente puede necesitar acceder o modificar. | 
+| **Accesibilidad:** Este estado está definido dentro de un componente específico, y solo ese componente y sus componentes hijos (si se pasan como props) tienen acceso a él. | **Accesibilidad:** Este estado es accesible para todos los componentes en toda la aplicación. Es útil cuando varios componentes en diferentes partes de la aplicación necesitan compartir la misma información. |
+| **Uso inicial:** Como regla general, siempre deberíamos comenzar utilizando el estado local. Esto se debe a que es más simple y más eficiente, ya que limita el estado al área donde se necesita. | **Herramientas comunes:** Para manejar el estado global, se utilizan herramientas como la API de Contexto de React (Context API) o Redux. Estas herramientas permiten gestionar el estado global de manera efectiva. |
+
+- - -
+
+<br>
 
