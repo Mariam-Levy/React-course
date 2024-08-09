@@ -189,3 +189,18 @@ _ _ _
 
 <br>
 
+## Derived State (Estado Derivado):
+- Derived State: Es un estado que se calcula a partir de otro estado existente o de los props. No es un estado que se maneje con ~~useState~~, sino que se deriva dinámicamente.
+  
+- **Beneficios:**
+    - Menos variables de estado para manejar, lo que simplifica el código.
+    - Se asegura que los valores derivados estén siempre sincronizados con el estado original.
+    - Reducir la cantidad de re-renderizados innecesarios, mejorando el rendimiento.
+
+**Resumen**:
+En lugar de manejar múltiples estados que dependen unos de otros, es mejor calcular algunos de estos estados (o valores) directamente a partir del estado base. Esto simplifica el código y evita problemas de sincronización, además de mejorar la eficiencia al reducir la cantidad de re-renderizados.
+Este enfoque es recomendable cuando un valor depende directamente de otro estado o prop y no necesita mantenerse de forma independiente.
+
+- - -
+
+<br>
