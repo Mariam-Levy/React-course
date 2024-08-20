@@ -50,26 +50,54 @@ const tempWatchedData = [
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
+export default function App() {
+  return (
+    <>
+      <NavBar />
+      <Main />
+
+    </>
+  );
+}
+
 function NavBar() {
+  return (
+    <nav className="nav-bar">
+      <Logo />
+      <Search />
+      <NumResults />
+    </nav>
+  )
+}
+
+function Logo() {
+  return (
+    <div className="logo">
+      <span role="img">🍿</span>
+      <h1>usePopcorn</h1>
+    </div>
+  )
+}
+
+function Search() {
   const [query, setQuery] = useState("");
 
   return (
-    <nav className="nav-bar">
-      <div className="logo">
-        <span role="img">🍿</span>
-        <h1>usePopcorn</h1>
-      </div>
-      <input
-        className="search"
-        type="text"
-        placeholder="Search movies..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <p className="num-results">
-        Found <strong>x</strong> results
-      </p>
-    </nav>
+    <input
+      className="search"
+      type="text"
+      placeholder="Search movies..."
+      value={query}
+      onChange={(e) => setQuery(e.target.value)}
+    />
+  )
+}
+
+function NumResults() {
+  return (
+    <p className="num-results">
+      Found <strong>x</strong> results
+    </p>
   )
 }
 
@@ -82,32 +110,10 @@ function Main() {
   const avgImdbRating = average(watched.map((movie) => movie.imdbRating));
   const avgUserRating = average(watched.map((movie) => movie.userRating));
   const avgRuntime = average(watched.map((movie) => movie.runtime));
+
   return (
     <main className="main">
-      <div className="box">
-        <button
-          className="btn-toggle"
-          onClick={() => setIsOpen1((open) => !open)}
-        >
-          {isOpen1 ? "–" : "+"}
-        </button>
-        {isOpen1 && (
-          <ul className="list">
-            {movies?.map((movie) => (
-              <li key={movie.imdbID}>
-                <img src={movie.Poster} alt={`${movie.Title} poster`} />
-                <h3>{movie.Title}</h3>
-                <div>
-                  <p>
-                    <span>🗓</span>
-                    <span>{movie.Year}</span>
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
+
 
       <div className="box">
         <button
@@ -169,14 +175,34 @@ function Main() {
   )
 }
 
-export default function App() {
 
 
+
+function ListBox() {
   return (
-    <>
-      <NavBar />
-      <Main />
-
-    </>
-  );
+    <div className="box">
+      <button
+        className="btn-toggle"
+        onClick={() => setIsOpen1((open) => !open)}
+      >
+        {isOpen1 ? "–" : "+"}
+      </button>
+      {isOpen1 && (
+        <ul className="list">
+          {movies?.map((movie) => (
+            <li key={movie.imdbID}>
+              <img src={movie.Poster} alt={`${movie.Title} poster`} />
+              <h3>{movie.Title}</h3>
+              <div>
+                <p>
+                  <span>🗓</span>
+                  <span>{movie.Year}</span>
+                </p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
 }
